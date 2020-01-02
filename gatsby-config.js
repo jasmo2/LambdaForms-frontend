@@ -1,18 +1,17 @@
 let activeEnv =
-  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
-require("dotenv").config({
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development';
+require('dotenv').config({
   path: `.env.${activeEnv}`
 });
 
 module.exports = {
   siteMetadata: {
-    title: "Canyon Coolers"
+    title: 'Canyon Coolers'
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
+    'gatsby-plugin-react-helmet',
     // Add typescript stack into webpack
-    "gatsby-plugin-typescript",
-    "gatsby-plugin-emotion",
+    'gatsby-plugin-typescript',
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {

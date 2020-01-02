@@ -24,7 +24,8 @@
       "~/organisms/*": ["src/components/organisms/*"],
       "~/pages/*": ["src/pages/*"],
       "~/templates/*": ["src/components/templates/*"],
-      "~/theme/*": ["src/theme/*"]
+      "~/theme/*": ["src/theme/*"],
+      "~/overrides/*": ["src/theme/overrides/*"]
       // "~/fonts/*": ["src/fonts/*"],
       // "~/graphql/*": ["src/graphql/*"],
       // "~/images/*": ["src/images/*"],
