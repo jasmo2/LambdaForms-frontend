@@ -32,7 +32,7 @@ const Footer: React.FC<FooterProps> = props => {
 }
 
 type FooterProps = {
-  className: string
+  className?: string
 }
 
 export default Footer

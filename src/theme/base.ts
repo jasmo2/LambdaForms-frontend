@@ -13,5 +13,6 @@ const theme = createMuiTheme({
     drawer: 1100
   }
 })
+console.log('TCL: theme', theme)
 
 export default theme

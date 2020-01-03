@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }))
 
-const Main = props => {
+const Main: React.FC<MainProps> = props => {
   const { children } = props
 
   const classes = useStyles()
@@ -48,6 +48,7 @@ const Main = props => {
   return (
     <div
       className={clsx({
+        main: 'mainly',
         [classes.root]: true,
         [classes.shiftContent]: isDesktop
       })}>
@@ -63,6 +64,9 @@ const Main = props => {
       </main>
     </div>
   )
+}
+type MainProps = {
+  children: any
 }
 
 export default Main

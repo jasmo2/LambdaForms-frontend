@@ -10,6 +10,8 @@ interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
 }
 
 const App = props => {
+  console.log('TCL: App -> props', props)
+  console.log('TCL: App -> theme', theme)
   return (
     <ThemeProvider theme={theme}>
       <Helmet>
@@ -29,7 +31,7 @@ const App = props => {
           src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
           async></script>
       </Helmet>
-      {props.children()}
+      {props.children}
     </ThemeProvider>
   )
 }

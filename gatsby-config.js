@@ -1,12 +1,13 @@
 let activeEnv =
-  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development';
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development'
+require('ts-node').register({ files: true })
 require('dotenv').config({
   path: `.env.${activeEnv}`
-});
+})
 
 module.exports = {
   siteMetadata: {
-    title: 'Canyon Coolers'
+    title: 'Lambda Forms'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -19,6 +20,12 @@ module.exports = {
           injectFirst: true
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/layouts/App.tsx`)
+      }
     }
     // {
     //   resolve: "gatsby-source-prismic",
@@ -28,4 +35,4 @@ module.exports = {
     //   }
     // }
   ]
-};
+}

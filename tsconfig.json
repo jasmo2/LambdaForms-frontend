@@ -22,15 +22,15 @@
       "~/layouts/*": ["src/layouts/*"],
       "~/molecules/*": ["src/components/molecules/*"],
       "~/organisms/*": ["src/components/organisms/*"],
-      "~/pages/*": ["src/pages/*"],
-      "~/templates/*": ["src/components/templates/*"],
-      "~/theme/*": ["src/theme/*"],
       "~/overrides/*": ["src/theme/overrides/*"],
-      "~/static/*": ["static/*"]
+      "~/pages/*": ["src/pages/*"],
+      "~/wrappers/*": ["src/wrappers/*"],
+      "~/static/*": ["static/*"],
+      "~/templates/*": ["src/components/templates/*"],
+      "~/theme/*": ["src/theme/*"]
       // "~/fonts/*": ["src/fonts/*"],
       // "~/graphql/*": ["src/graphql/*"],
       // "~/images/*": ["src/images/*"],
-      // "~/providers/*": ["src/providers/*"],
       // "~/state/*": ["src/state/*"],
       // "~/utils/*": ["src/utils/*"],
       // "~/vendor/*": ["vendor/*"]
