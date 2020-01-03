@@ -30,7 +30,7 @@ const Topbar: React.FC<TopbarProps> = props => {
     <AppBar {...rest} className={clsx(classes.root, className)}>
       <Toolbar>
         <Link to="/">
-          <img alt="Logo" src="/images/logos/logo--white.svg" />
+          <img alt="Logo" src={'/logos/logo--white.svg'} />
         </Link>
         <div className={classes.flexGrow} />
         <Hidden mdDown>

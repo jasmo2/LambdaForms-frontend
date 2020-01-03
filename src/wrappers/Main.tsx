@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import clsx from 'clsx'
 import { makeStyles, useTheme, Theme } from '@material-ui/core/styles'
 import { useMediaQuery } from '@material-ui/core'
@@ -42,16 +41,14 @@ const Main: React.FC<MainProps> = props => {
   const handleSidebarClose = () => {
     setOpenSidebar(false)
   }
-
   const shouldOpenSidebar = isDesktop ? true : openSidebar
 
+  const className = clsx({
+    [classes.root]: true,
+    [classes.shiftContent]: isDesktop
+  })
   return (
-    <div
-      className={clsx({
-        main: 'mainly',
-        [classes.root]: true,
-        [classes.shiftContent]: isDesktop
-      })}>
+    <div className={className}>
       <Topbar onSidebarOpen={handleSidebarOpen} />
       <Sidebar
         onClose={handleSidebarClose}

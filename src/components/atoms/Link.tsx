@@ -1,15 +1,18 @@
 import React, { useState, forwardRef } from 'react'
 import { Button, Avatar } from '@material-ui/core'
+import { withStyles } from '@material-ui/styles'
+import { Link } from 'gatsby-theme-material-ui'
+import clsx from 'clsx'
 
-import GatsbyLink from 'gatsby-link'
+const CustomLink = withStyles({
+  root: {
+    flex: 1
+  }
+})(Link)
 
-const CustomRouterLink = forwardRef<any, BaseLinkProps>((props, ref) => {
-  console.log('TCL: CustomRouterLink -> props', props)
-  return (
-    <div ref={ref} style={{ flexGrow: 1 }}>
-      <GatsbyLink {...props} />
-    </div>
-  )
+const CustomRouterLink = forwardRef<any, ButtonLinkProps>((props, ref) => {
+  const { children, ...rest } = props
+  return <CustomLink {...rest}>{children}</CustomLink>
 })
 
 export const ButtonLink: React.FC<ButtonLinkProps> = ({
@@ -18,14 +21,14 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
   className,
   to
 }) => {
-  const [btnRef, setBtnRef] = useState(null) as any
+  const btnRef = React.createRef()
   return (
-    <Button ref={ref => setBtnRef(ref)} className={className}>
-      <CustomRouterLink
-        activeClassName={activeClassName}
-        ref={btnRef}
-        to={to}
-      />
+    <Button
+      component={CustomRouterLink}
+      activeClassName={activeClassName}
+      className={className}
+      ref={btnRef}
+      to={to}>
       {children}
     </Button>
   )
@@ -57,7 +60,7 @@ interface BaseLinkProps {
 
 interface CustomRouterLinkProps {
   children?: any
-  className: string
+  className?: string
 }
 
 interface ButtonLinkProps extends CustomRouterLinkProps, BaseLinkProps {}

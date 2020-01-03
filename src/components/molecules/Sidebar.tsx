@@ -14,8 +14,6 @@ import LockOpenIcon from '@material-ui/icons/LockOpen'
 import SidebarNav from '~/molecules/SidebarNav'
 import Profile from '~/molecules/Profile'
 
-// import { Profile, SidebarNav, UpgradePlan } from './components'
-
 const useStyles = makeStyles((theme: Theme) => ({
   drawer: {
     width: 240,
@@ -39,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }))
 
-const Sidebar = props => {
+const Sidebar: React.FC<SidebarProps> = props => {
   const { open, variant, onClose, className, ...rest } = props
 
   const classes = useStyles()
@@ -47,7 +45,7 @@ const Sidebar = props => {
   const pages = [
     {
       title: 'Dashboard',
-      href: '/dashboard',
+      href: '/',
       icon: <DashboardIcon />
     },
     {
@@ -107,7 +105,7 @@ const Sidebar = props => {
   )
 }
 
-type Sidebar = {
+type SidebarProps = {
   className?: string
   onClose: Function
   open: boolean

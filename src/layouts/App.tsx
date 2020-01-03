@@ -10,8 +10,6 @@ interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
 }
 
 const App = props => {
-  console.log('TCL: App -> props', props)
-  console.log('TCL: App -> theme', theme)
   return (
     <ThemeProvider theme={theme}>
       <Helmet>
@@ -25,6 +23,10 @@ const App = props => {
         <meta
           name="description"
           content="Material UI template to integrate directly with Gatsby"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Roboto:300,400,500,700"
+          rel="stylesheet"
         />
         <script
           type="text/javascript"

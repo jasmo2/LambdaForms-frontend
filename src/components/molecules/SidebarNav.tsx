@@ -5,7 +5,6 @@ import { List, ListItem, Button, colors, Theme } from '@material-ui/core'
 import { ButtonLink } from '~/atoms/Link'
 
 const useStyles = makeStyles((theme: Theme) => {
-  console.log('TCL: useStyles -> theme', theme)
   return {
     root: {},
     item: {
@@ -56,7 +55,6 @@ const SidebarNav: React.FC<SidebarNavProps> = props => {
             <div className={classes.icon}>{page.icon}</div>
             {page.title}
           </ButtonLink>
-          <Button></Button>
         </ListItem>
       ))}
     </List>
