@@ -4,7 +4,9 @@ import clsx from 'clsx'
 import { makeStyles, useTheme, Theme } from '@material-ui/core/styles'
 import { useMediaQuery } from '@material-ui/core'
 
-import { Sidebar, Topbar, Footer } from '~/components/molecules'
+import Sidebar from '~/components/molecules/Sidebar'
+import Topbar from '~/components/molecules/Topbar'
+import Footer from '~/components/atoms/Footer'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {

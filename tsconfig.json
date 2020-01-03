@@ -25,13 +25,13 @@
       "~/pages/*": ["src/pages/*"],
       "~/templates/*": ["src/components/templates/*"],
       "~/theme/*": ["src/theme/*"],
-      "~/overrides/*": ["src/theme/overrides/*"]
+      "~/overrides/*": ["src/theme/overrides/*"],
+      "~/static/*": ["static/*"]
       // "~/fonts/*": ["src/fonts/*"],
       // "~/graphql/*": ["src/graphql/*"],
       // "~/images/*": ["src/images/*"],
       // "~/providers/*": ["src/providers/*"],
       // "~/state/*": ["src/state/*"],
-      // "~/static/*": ["static/*"],
       // "~/utils/*": ["src/utils/*"],
       // "~/vendor/*": ["vendor/*"]
     }

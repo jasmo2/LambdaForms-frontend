@@ -1,6 +1,5 @@
 import React from 'react'
 import clsx from 'clsx'
-import PropTypes from 'prop-types'
 import { makeStyles, Theme } from '@material-ui/core/styles'
 import { Divider, Drawer } from '@material-ui/core'
 import DashboardIcon from '@material-ui/icons/Dashboard'
@@ -12,7 +11,10 @@ import AccountBoxIcon from '@material-ui/icons/AccountBox'
 import SettingsIcon from '@material-ui/icons/Settings'
 import LockOpenIcon from '@material-ui/icons/LockOpen'
 
-import { Profile, SidebarNav, UpgradePlan } from './components'
+import SidebarNav from '~/molecules/SidebarNav'
+import Profile from '~/molecules/Profile'
+
+// import { Profile, SidebarNav, UpgradePlan } from './components'
 
 const useStyles = makeStyles((theme: Theme) => ({
   drawer: {
@@ -96,17 +98,20 @@ const Sidebar = props => {
         <Profile />
         <Divider className={classes.divider} />
         <SidebarNav className={classes.nav} pages={pages} />
-        <UpgradePlan />
+        {/**
+         * #Fix complete this component
+         */
+        /* <UpgradePlan /> */}
       </div>
     </Drawer>
   )
 }
 
-Sidebar.propTypes = {
-  className: PropTypes.string,
-  onClose: PropTypes.func,
-  open: PropTypes.bool.isRequired,
-  variant: PropTypes.string.isRequired
+type Sidebar = {
+  className?: string
+  onClose: Function
+  open: boolean
+  variant: string
 }
 
 export default Sidebar
