@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import { makeStyles, Theme } from '@material-ui/core/styles'
-import { Divider, Drawer } from '@material-ui/core'
+import { Divider, Drawer, DrawerProps, ModalProps } from '@material-ui/core'
 import DashboardIcon from '@material-ui/icons/Dashboard'
 import PeopleIcon from '@material-ui/icons/People'
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
@@ -45,7 +45,7 @@ const Sidebar: React.FC<SidebarProps> = props => {
   const pages = [
     {
       title: 'Dashboard',
-      href: '/',
+      href: '/dashboard',
       icon: <DashboardIcon />
     },
     {
@@ -89,9 +89,9 @@ const Sidebar: React.FC<SidebarProps> = props => {
     <Drawer
       anchor="left"
       classes={{ paper: classes.drawer }}
-      onClose={onClose}
+      onClose={onClose as ModalProps['onClose']}
       open={open}
-      variant={variant}>
+      variant={variant as DrawerProps['variant']}>
       <div {...rest} className={clsx(classes.root, className)}>
         <Profile />
         <Divider className={classes.divider} />
