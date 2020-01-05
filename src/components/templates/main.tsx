@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }))
 
-const Main = props => {
+const Main: React.FC<MainProps> = props => {
   const { children } = props
 
   const classes = useStyles()
@@ -63,8 +63,8 @@ const Main = props => {
   )
 }
 
-Main.propTypes = {
-  children: PropTypes.node
+type MainProps = {
+  children: React.ReactNode
 }
 
 export default Main

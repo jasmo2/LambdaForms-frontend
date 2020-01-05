@@ -5,10 +5,6 @@ import Helmet from 'react-helmet'
 import './index.css'
 import theme from '~/theme/base'
 
-interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
-  children: any
-}
-
 const App = props => {
   return (
     <ThemeProvider theme={theme}>
@@ -36,6 +32,9 @@ const App = props => {
       {props.children}
     </ThemeProvider>
   )
+}
+interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
+  children?: React.ReactNode
 }
 
 export default App

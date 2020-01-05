@@ -62,8 +62,9 @@ const Main: React.FC<MainProps> = props => {
     </div>
   )
 }
+
 type MainProps = {
-  children: any
+  children?: React.ReactNode
 }
 
 export default Main

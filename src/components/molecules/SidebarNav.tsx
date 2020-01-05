@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/styles'
-import { List, ListItem, Button, colors, Theme } from '@material-ui/core'
+import { List, ListItem, colors, Theme } from '@material-ui/core'
 import { ButtonLink } from '~/atoms/Link'
 
 const useStyles = makeStyles((theme: Theme) => {
