@@ -26,7 +26,7 @@ const Minimal: React.FC<MinimalProps> = props => {
 }
 
 type MinimalProps = {
-  children?: React.ReactNode
+  children: React.ReactNode
   className?: string
 }
 
