@@ -24,10 +24,10 @@
       "~/organisms/*": ["src/components/organisms/*"],
       "~/overrides/*": ["src/theme/overrides/*"],
       "~/pages/*": ["src/pages/*"],
-      "~/wrappers/*": ["src/wrappers/*"],
       "~/static/*": ["static/*"],
       "~/templates/*": ["src/components/templates/*"],
-      "~/theme/*": ["src/theme/*"]
+      "~/theme/*": ["src/theme/*"],
+      "~/wrappers/*": ["src/wrappers/*"]
       // "~/fonts/*": ["src/fonts/*"],
       // "~/graphql/*": ["src/graphql/*"],
       // "~/images/*": ["src/images/*"],
