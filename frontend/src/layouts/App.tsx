@@ -7,10 +7,14 @@ import theme from '~/theme/base'
 
 import ApolloClient, { InMemoryCache } from 'apollo-boost'
 import { ApolloProvider } from '@apollo/react-hooks'
+const uri =
+  process.env.GATSBY_ENV_DEVELOPMENT === 'development'
+    ? process.env.GATSBY_URL_DEVELOPMENT
+    : process.env.GATSBY_URL_PRODUCTION
 
 const createApolloClient = () => {
   const client = new ApolloClient({
-    uri: `/.netlify/functions/main`,
+    uri,
     cache: new InMemoryCache()
   })
 

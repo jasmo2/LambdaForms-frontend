@@ -40,9 +40,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "build:functions": "netlify-lambda build functions/graphql -c webpack.functions.js --babelrc false",
     "develop": "ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby develop --host 0.0.0.0 --port 8000",
-    "develop:functions": "netlify-lambda serve functions",
     "format": "prettier --parser typescript --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.ts*\"",
     "refresh": "curl -X POST http://localhost:8000/__refresh",
     "serve": "gatsby serve --port 8000",
