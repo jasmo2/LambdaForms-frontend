@@ -5,11 +5,14 @@
   "dependencies": {
     "@swyx/hooks": "^0.0.20",
     "@types/jest": "^24.9.1",
+    "@types/mongoose": "^5.5.43",
     "@types/node": "^13.5.0",
     "@types/node-fetch": "^2.5.4",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
+    "apollo-server-express": "^2.9.16",
     "dotenv": "^8.2.0",
+    "mongoose": "^5.8.9",
     "node-fetch": "^2.6.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -18,9 +21,9 @@
   },
   "scripts": {
     "start": "run-p start:**",
-    "start:lambda": "netlify-lambda serve ./lambda",
+    "start:lambda": "netlify-lambda serve ./src/lambda",
     "build": "run-p build:**",
-    "build:lambda": "netlify-lambda build ./lambda",
+    "build:lambda": "netlify-lambda build ./src/lambda",
     "test": "react-scripts test"
   },
   "eslintConfig": {
