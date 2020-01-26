@@ -35,7 +35,7 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn run develop",
-    "develop": "ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby develop --host 0.0.0.0 --port 8000",
+    "develop": "ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby develop --host 0.0.0.0 --port 4444",
     "refresh": "curl -X POST http://localhost:8000/__refresh",
     "build": "gatsby build",
     "serve": "gatsby serve --port 8000",

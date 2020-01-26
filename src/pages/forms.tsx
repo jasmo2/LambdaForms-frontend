@@ -27,7 +27,13 @@ const Dashboard = () => {
 
   return (
     <Main>
-      <h1>Index Page</h1>
+      <div className={classes.root}>
+        <Grid container spacing={4}>
+          <Grid item lg={3} sm={6} xl={3} xs={12}>
+            <FormCard />
+          </Grid>
+        </Grid>
+      </div>
     </Main>
   )
 

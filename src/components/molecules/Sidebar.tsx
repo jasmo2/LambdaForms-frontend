@@ -44,45 +44,45 @@ const Sidebar: React.FC<SidebarProps> = props => {
 
   const pages = [
     {
-      title: 'Dashboard',
-      href: '/dashboard',
+      title: 'Forms',
+      href: '/forms',
       icon: <DashboardIcon />
-    },
-    {
-      title: 'Users',
-      href: '/users',
-      icon: <PeopleIcon />
-    },
-    {
-      title: 'Products',
-      href: '/products',
-      icon: <ShoppingBasketIcon />
-    },
-    {
-      title: 'Authentication',
-      href: '/sign-in',
-      icon: <LockOpenIcon />
-    },
-    {
-      title: 'Typography',
-      href: '/typography',
-      icon: <TextFieldsIcon />
-    },
-    {
-      title: 'Icons',
-      href: '/icons',
-      icon: <ImageIcon />
-    },
-    {
-      title: 'Account',
-      href: '/account',
-      icon: <AccountBoxIcon />
-    },
-    {
-      title: 'Settings',
-      href: '/settings',
-      icon: <SettingsIcon />
     }
+    // {
+    //   title: 'User',
+    //   href: '/user',
+    //   icon: <PeopleIcon />
+    // }
+    // {
+    //   title: 'Products',
+    //   href: '/products',
+    //   icon: <ShoppingBasketIcon />
+    // },
+    // {
+    //   title: 'Authentication',
+    //   href: '/sign-in',
+    //   icon: <LockOpenIcon />
+    // },
+    // {
+    //   title: 'Typography',
+    //   href: '/typography',
+    //   icon: <TextFieldsIcon />
+    // },
+    // {
+    //   title: 'Icons',
+    //   href: '/icons',
+    //   icon: <ImageIcon />
+    // },
+    // {
+    //   title: 'Account',
+    //   href: '/account',
+    //   icon: <AccountBoxIcon />
+    // },
+    // {
+    //   title: 'Settings',
+    //   href: '/settings',
+    //   icon: <SettingsIcon />
+    // }
   ]
 
   return (
