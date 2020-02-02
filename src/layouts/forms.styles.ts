@@ -61,6 +61,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexGrow: 1,
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
     [theme.breakpoints.down('md')]: {
       justifyContent: 'center'
     }
@@ -90,7 +91,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   textField: {
     marginTop: theme.spacing(2)
   },
-  SubmitButton: {
+  submitButton: {
     margin: theme.spacing(2, 0)
   }
 }))

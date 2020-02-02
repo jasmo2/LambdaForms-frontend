@@ -114,7 +114,7 @@ const Form: React.FC<Props> = props => {
                   />
 
                   <Button
-                    className={classes.SubmitButton}
+                    className={classes.submitButton}
                     color="primary"
                     disabled={!formState.isValid}
                     fullWidth

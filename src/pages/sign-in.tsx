@@ -181,7 +181,7 @@ const SignIn: React.FC<SignInProps> = props => {
                     variant="outlined"
                   />
                   <Button
-                    className={classes.SubmitButton}
+                    className={classes.submitButton}
                     color="primary"
                     disabled={!formState.isValid}
                     fullWidth
