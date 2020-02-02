@@ -1,4 +1,5 @@
 import React from 'react'
+import { navigate } from 'gatsby'
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/styles'
 import {
@@ -12,16 +13,19 @@ import {
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    margin: 'auto',
     borderRadius: 0,
+    margin: 'auto',
     position: 'relative'
   },
   actionArea: {
-    height: '100%',
-    backgroundColor: theme.palette.primary.light
+    backgroundColor: theme.palette.primary.light,
+    border: 'dashed',
+    borderColor: theme.palette.card.dash,
+    borderStyle: 'dashed',
+    borderWidth: '1.6px',
+    height: '100%'
   },
   box: {
-    backgroundColor: 'red',
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
@@ -46,7 +50,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }))
 
-const AddCard = props => {
+const handleRedirection = e => {
+  navigate('/form-settings')
+}
+
+const AddCard: React.FC<AddCardProps> = React.memo(props => {
   const { className: CN, ...rest } = props
 
   const classes = useStyles()
@@ -54,7 +62,9 @@ const AddCard = props => {
 
   return (
     <Card className={clsx(root, CN)}>
-      <CardActionArea className={clsx(actionArea, CN)}>
+      <CardActionArea
+        className={clsx(actionArea, CN)}
+        onClick={handleRedirection}>
         <CardContent className={clsx(content, CN)}>
           <Box className={box}>
             <i className="material-icons">add_circle_outline</i>
@@ -63,9 +73,9 @@ const AddCard = props => {
       </CardActionArea>
     </Card>
   )
-}
+})
 
-type AddCard = {
+type AddCardProps = {
   className?: string
 }
 

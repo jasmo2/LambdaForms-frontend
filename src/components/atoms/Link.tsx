@@ -2,7 +2,6 @@ import React, { useState, forwardRef } from 'react'
 import { Button, Avatar } from '@material-ui/core'
 import { withStyles } from '@material-ui/styles'
 import { Link } from 'gatsby-theme-material-ui'
-import clsx from 'clsx'
 
 const CustomLink = withStyles({
   root: {

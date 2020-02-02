@@ -14,7 +14,7 @@ import validate from 'validate.js'
 
 import Minimal from '~/wrappers/Minimal'
 import { FacebookIcon, GoogleIcon } from '~/atoms/Icons'
-import useStyles from '~/layouts/Sign-in.styles'
+import useStyles from '~/layouts/forms.styles'
 
 const schema = {
   email: {
@@ -181,7 +181,7 @@ const SignIn: React.FC<SignInProps> = props => {
                     variant="outlined"
                   />
                   <Button
-                    className={classes.signInButton}
+                    className={classes.SubmitButton}
                     color="primary"
                     disabled={!formState.isValid}
                     fullWidth

@@ -90,7 +90,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   textField: {
     marginTop: theme.spacing(2)
   },
-  signInButton: {
+  SubmitButton: {
     margin: theme.spacing(2, 0)
   }
 }))
